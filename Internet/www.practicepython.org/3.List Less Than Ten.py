@@ -9,9 +9,14 @@
 # the original list a that are smaller than that number given by the user.
 
 list_var = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
-
+list2_var = []
 for element in list_var:
-    if element < 5:
-        print(element)
+    if element < 5 :
+        list2_var.append(element)
+print(list2_var)
+
+
+
+
 
 
