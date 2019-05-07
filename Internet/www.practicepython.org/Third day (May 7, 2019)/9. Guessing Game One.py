@@ -17,7 +17,7 @@ while True:
         print("thanks for playing you did ", i, "tries")
         break
 """
-اجبارن دستور خروج و اول گذاشتم ،چون اگه کاربر خروج ارور میداد که
+اجبارن دستور خروج و اول گذاشتم ،چون اگه کاربر خروج (exit) و مینوشت ارور میداد که
 نمیشه کاراکتر و به رقم (int) تبدیل کرد
 """
     input_number = int(input_string)
