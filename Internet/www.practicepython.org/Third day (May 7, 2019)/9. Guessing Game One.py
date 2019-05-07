@@ -16,10 +16,10 @@ while True:
     if input_string == "Exit" or input_string == "exit":
         print("thanks for playing you did ", i, "tries")
         break
-"""
-اجبارن دستور خروج و اول گذاشتم ،چون اگه کاربر خروج (exit) و مینوشت ارور میداد که
-نمیشه کاراکتر و به رقم (int) تبدیل کرد
-"""
+# """
+# اجبارن دستور خروج و اول گذاشتم ،چون اگه کاربر خروج (exit) و مینوشت ارور میداد که
+# نمیشه کاراکتر و به رقم (int) تبدیل کرد
+# """
     input_number = int(input_string)
     i = i + 1
     if input_number == random_number:
