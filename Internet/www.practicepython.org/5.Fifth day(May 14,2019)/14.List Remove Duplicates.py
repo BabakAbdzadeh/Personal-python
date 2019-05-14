@@ -7,15 +7,14 @@
 # Go back and do Exercise 5 using sets, and write the solution for that in a different function.
 
 
-def duplicate_remove(list):
-    return list(set(list))
-    # list_without_duplicate = []
-    # for i in list:
-    #     set_organise.add(list[i])
-    #
-    # for i in set_organise:
-    #     list_without_duplicate = set_organise.pop(i)
-    # return list_without_duplicate
+def duplicate_remove(list_in):
+    # First way to do this :
+    # duplicate_remover = set(list_in)
+    # return_list = list(duplicate_remover)
+    # return return_list
+
+    # second way to do this :
+    return list(set(list_in))
 
 
 sample_list = [1, 1, 1, 1, 2, 3, 4, 5, 6, 7, 1, 1, 2, 3, 4, 5, 6, 6, 6, 6, 7, 8, 7, 6, 5, 4, 3, 0, 0, 0, 0, 22]
