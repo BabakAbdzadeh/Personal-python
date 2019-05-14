@@ -11,12 +11,10 @@
 
 def backward(input_string):
     input_list = input_string.split()
-    for i in input_list:
-        len_input_list = len(input_list)
-        backward_list = input_list[-len_input_list+i]
-
-
-    return backward_list
+    input_list.reverse()  # input_list.reverse(), like many list methods, acts in-place, and therefore returns None
+                          # برای همین اگر سعی کنیم درون یک متغیر قرار دهیم اون متخیر خالی می ماند
+    backwardly_list = ' '.join(input_list)
+    return backwardly_list
 
 
 input_var = input("please enter your string:")
