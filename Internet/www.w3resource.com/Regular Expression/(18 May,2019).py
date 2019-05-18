@@ -61,11 +61,18 @@ print(text_match3("ab"))
 def text_match4(string):
     pattern = 'ab?'
     if re.search(pattern, string):
-        return 'we have a match! ex4'
+        x = re.search(pattern,string)
+        return 'we have a match! ex4', x
     else:
         return 'no match found! ex4'
 
 
 print(text_match4('a'))
 print(text_match4('ab'))
-print(text_match4('abb'))
+print(text_match4('abbb'))
+
+
+#
+#
+# 5. Write a Python program that matches a string that has an a followed by three 'b'
+
