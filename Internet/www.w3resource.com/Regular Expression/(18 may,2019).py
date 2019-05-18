@@ -52,3 +52,20 @@ def text_match3(string):
 
 print(text_match3("a"))
 print(text_match3("ab"))
+
+
+#
+#
+# 4. Write a Python program that matches a string that has an a followed by zero or one 'b'
+
+def text_match4(string):
+    pattern = 'ab?'
+    if re.search(pattern, string):
+        return 'we have a match! ex4'
+    else:
+        return 'no match found! ex4'
+
+
+print(text_match4('a'))
+print(text_match4('ab'))
+print(text_match4('abb'))
