@@ -61,7 +61,7 @@ print(text_match3("ab"))
 def text_match4(string):
     pattern = 'ab?'
     if re.search(pattern, string):
-        x = re.search(pattern,string)
+        x = re.search(pattern, string)
         return 'we have a match! ex4', x
     else:
         return 'no match found! ex4'
@@ -75,4 +75,56 @@ print(text_match4('abbb'))
 #
 #
 # 5. Write a Python program that matches a string that has an a followed by three 'b'
+def text_match5(string):
+    pattern = 'ab{3}'
+    if re.search(pattern, string):
+        x = re.search(pattern, string)
+        return 'we have a match! ex5', x
+    else:
+        return 'no match found! ex5'
 
+
+print(text_match5('a'))
+print(text_match5('ab'))
+print(text_match5('abb'))
+print(text_match5('abbb'))
+print(text_match5('abbbb'))
+
+
+#
+#
+# 6. Write a Python program that matches a string that has an a followed by two to three 'b'
+
+def text_match6(string):
+    pattern = 'ab{2,3}'
+    if re.search(pattern, string):
+        x = re.search(pattern, string)
+        return 'we have a match! ex6', x
+    else:
+        return 'no match found! ex6'
+
+
+print(text_match6('a'))
+print(text_match6('ab'))
+print(text_match6('abb'))
+print(text_match6('abbb'))
+print(text_match6('abbbb'))
+
+
+#
+#
+# 7. Write a Python program to find sequences of lowercase letters joined with a underscore.
+
+def sequences_finder(string):
+    pattern = '^_[a-z]+?'  # why + instead of * : because you use * ; pattern accept __ too , because after _ you have
+    # 0 or more [a-z]
+    if re.search(pattern, string):
+        x = re.findall(pattern, string)
+        return x
+    else:
+        return 'no match found! ex7'
+
+
+print(sequences_finder('abcd'))
+print(sequences_finder('_abcd'))
+print(sequences_finder(('__abc')))
