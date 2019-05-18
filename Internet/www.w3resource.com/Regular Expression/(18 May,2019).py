@@ -115,7 +115,7 @@ print(text_match6('abbbb'))
 #
 # 7. Write a Python program to find sequences of lowercase letters joined with a underscore.
 
-def sequences_finder(string):
+def sequences_finder7(string):
     pattern = '^_[a-z]+?'  # why + instead of * : because you use * ; pattern accept __ too , because after _ you have
     # 0 or more [a-z]
     if re.search(pattern, string):
@@ -125,6 +125,27 @@ def sequences_finder(string):
         return 'no match found! ex7'
 
 
-print(sequences_finder('abcd'))
-print(sequences_finder('_abcd'))
-print(sequences_finder(('__abc')))
+print(sequences_finder7('abcd'))
+print(sequences_finder7('_abcd'))
+print(sequences_finder7('__abc'))
+
+
+#
+#
+# 8. Write a Python program to find sequences of one upper case letter followed by lower case letters
+
+
+def sequences_finder8(string):
+    pattern = '^[a-z]+[A-Z]+?'
+    if re.search(pattern, string):
+        x = re.findall(pattern, string)
+        return x
+    else:
+        return 'no match found! ex8'
+
+
+print(sequences_finder8('h'))
+print(sequences_finder8('M'))
+print(sequences_finder8('hM'))
+print(sequences_finder8('hhM'))
+print(sequences_finder8('hMM'))
