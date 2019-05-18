@@ -18,5 +18,21 @@ ex1_string: str = " hi my name is Babak, I am 23 years old , non SERVIAM"
 x = re.findall("[a-zA-Z0-9]", ex1_string)
 print(x)
 
+
+#
+#
+#
 # 2. Write a Python program that matches a string that has an a followed by zero or more b's.
 
+def text_match(string):
+    pattern = 'ab*?'
+    if re.search(pattern, string):
+        return "we have match!"
+    else:
+        return 'no match found!'
+
+
+print(text_match("c"))
+print(text_match("an"))
+print(text_match("anb"))
+print(text_match("hi my name is abbbb"))
