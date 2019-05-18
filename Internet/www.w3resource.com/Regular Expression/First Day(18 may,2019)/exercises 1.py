@@ -24,15 +24,31 @@ print(x)
 #
 # 2. Write a Python program that matches a string that has an a followed by zero or more b's.
 
-def text_match(string):
+def text_match2(string):
     pattern = 'ab*?'
     if re.search(pattern, string):
-        return "we have match!"
+        return "we have match! ex2"
     else:
-        return 'no match found!'
+        return 'no match found! ex2'
 
 
-print(text_match("c"))
-print(text_match("an"))
-print(text_match("anb"))
-print(text_match("hi my name is abbbb"))
+print(text_match2("c"))
+print(text_match2("an"))
+print(text_match2("anb"))
+print(text_match2("hi my name is abbbb"))
+
+
+#
+#
+# 3. Write a Python program that matches a string that has an a followed by one or more b's
+
+def text_match3(string):
+    pattern = 'ab+?'
+    if re.search(pattern, string):
+        return 'we have a match! ex3'
+    else:
+        return 'no match found! ex3'
+
+
+print(text_match3("a"))
+print(text_match3("ab"))
