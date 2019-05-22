@@ -35,3 +35,21 @@ def word_match13(string):
 
 print(word_match13('zoo zebra hazard lampard'
                    'in this string, we have words with Z or oZy like there is a zoo in bazzar'))
+
+
+#
+# 14. Write a Python program to match a string that contains only upper and lowercase letters, numbers, and underscores.
+
+def word_match14(string):
+    pattern = '^[a-zA-Z0-9_]*$'
+    if re.search(pattern, string):
+        x = re.findall(pattern, string)
+        y = re.search(pattern, string)
+        print(x, y)
+    else:
+        print('no match found! ex14')
+
+
+print(word_match14('zoo zebra hazard lampard'
+                   'in this string, we have words with Z or oZy like there is a zoo in bazzar'))
+print(word_match14('this_is_a_test_for_SEEing_its_workingOrNot'))
