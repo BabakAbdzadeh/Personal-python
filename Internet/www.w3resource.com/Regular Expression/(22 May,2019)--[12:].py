@@ -9,9 +9,9 @@ def word_match12(string):
     if re.search(pattern, string):
         x = re.findall(pattern, string)
         y = re.search(pattern, string)
-        print(x, y)
+        return x, y
     else:
-        print('no match found! ex12')
+        return 'no match found! ex12'
 
 
 print(word_match12('babak'))
@@ -28,9 +28,9 @@ def word_match13(string):
     if re.search(pattern, string):
         x = re.findall(pattern, string)
         y = re.search(pattern, string)
-        print(x, y)
+        return x, y
     else:
-        print('no match found! ex13')
+        return 'no match found! ex13'
 
 
 print(word_match13('zoo zebra hazard lampard'
@@ -45,11 +45,15 @@ def word_match14(string):
     if re.search(pattern, string):
         x = re.findall(pattern, string)
         y = re.search(pattern, string)
-        print(x, y)
+        return x, y
     else:
-        print('no match found! ex14')
+        return 'no match found! ex14'
 
 
 print(word_match14('zoo zebra hazard lampard'
                    'in this string, we have words with Z or oZy like there is a zoo in bazzar'))
 print(word_match14('this_is_a_test_for_SEEing_its_workingOrNot'))
+
+
+#
+# 15.
