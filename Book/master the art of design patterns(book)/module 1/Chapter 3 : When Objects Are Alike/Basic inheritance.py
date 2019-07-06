@@ -12,7 +12,8 @@ class ContactList(list):
 class Contact:
     all_contacts = ContactList()
 
-    def __init__(self, name, email):
+    def __init__(self, name='', email='', **kwargs):
+        super().__init__(**kwargs)
         self.name = name
         self.email = email
         Contact.all_contacts.append(self)
@@ -25,7 +26,8 @@ class Supplier(Contact):
 
 
 class AddressHolder:
-    def __init__(self, street, city, state, code):
+    def __init__(self, street='', city='', state='', code='', **kwargs):
+        super().__init__(**kwargs)
         self.street = street
         self.city = city
         self.state = state
@@ -33,9 +35,8 @@ class AddressHolder:
 
 
 class Friend(Contact, AddressHolder):
-    def __init__(self, name, email, phone, street, city, state, code):
-        Contact.__init__(self, name, email)
-        AddressHolder.__init__(self, street, city, state, code)
+    def __init__(self, phone='', **kwargs):
+        super().__init__(**kwargs)
         self.phone = phone
 
 
