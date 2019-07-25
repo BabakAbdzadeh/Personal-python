@@ -87,7 +87,7 @@ class Bulldog(Dog):
         return "{} runs {}".format(self.name, speed)
 
 
-my_dogs = [RussellTerrier("mikey", 5), Bulldog("ted", 3), Dog("john", 7), Bulldog("bahar", 9)]
+my_dogs = [RussellTerrier("mikey", 5), Bulldog("ted", 3), Dog("john", 7), Bulldog("rexbull", 9)]
 
 
 my_pets = Pet(my_dogs)
