@@ -72,3 +72,5 @@ print(my_pets.dogs_counter())
 print(my_pets.dogs_age())
 
 
+
+
