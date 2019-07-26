@@ -23,3 +23,4 @@ ted = Dog("ted", 7)
 rex = Dog("rex", 3)
 
 Dog.get_biggest_number(mikey.age, ted.age, rex.age)
+
