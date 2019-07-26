@@ -11,6 +11,20 @@
 # My dogs are not hungry.
 
 
+# Next, add a walk() method to both the Pets and Dog classes so that when you call the method on the Pets class,
+# each dog instance assigned to the Pets class will walk(). Save this as dog_walking.py. This is slightly more
+# difficult.
+#
+# Start by implementing the method in the same manner as the speak() method. As for the method in the Pets class,
+# you will need to iterate through the list of dogs, then call the method itself.
+#
+# The output should look like this:
+#
+# Tom is walking!
+# Fletcher is walking!
+# Larry is walking!
+
+
 class Pet:
     """
     parent class
@@ -41,6 +55,10 @@ class Pet:
         else:
             print("My dogs are not hungry")
 
+    def walk(self):
+        for dog in self.dogs:
+            print("{} is walking".format(dog.name))
+
 
 class Dog:
     """
@@ -68,6 +86,9 @@ class Dog:
         else:
             return "my dogs are hungry"
 
+    def walk(self):
+        return "{} is walking ".format(self.name)
+
 
 class RussellTerrier(Dog):
     """
@@ -89,11 +110,12 @@ class Bulldog(Dog):
 
 my_dogs = [RussellTerrier("mikey", 5), Bulldog("ted", 3), Dog("john", 7), Bulldog("rexbull", 9)]
 
-
 my_pets = Pet(my_dogs)
 
 print(my_pets.dogs_counter())
 print(my_pets.dogs_age())
 
-
 print(my_pets.dogs_hunger())
+print(my_pets.walk())
+
+print(my_dogs[0].walk())

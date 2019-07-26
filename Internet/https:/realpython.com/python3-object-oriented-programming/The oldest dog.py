@@ -7,13 +7,10 @@ from typing import List, Any
 
 
 class Dog:
-    dog_list = []
 
     def __init__(self, name, age):
         self.name = name
         self.age = age
-        Dog.dog_list.append(self.name)
-        Dog.dog_list.append(self.age)
 
     def get_biggest_number(*args):
 
