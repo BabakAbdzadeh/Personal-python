@@ -14,7 +14,7 @@
 
 class Property:
     def __init__(self, square_feet='', beds='', baths='', **kwargs):
-        super.__init__(**kwargs)
+        super().__init__(**kwargs)
         self.square_feet = square_feet
         self.num_bedrooms = beds
         self.num_bathrooms = baths
@@ -139,7 +139,7 @@ class Rental:
         self.rent = rent
 
     def display(self):
-        super().diplay()
+        super().display()
         print("RENTAL DETAILS")
         print("rent: {}".format(self.rent))
         print("estimated utilities: {}".format(self.utilities))
@@ -164,3 +164,41 @@ class HouseRental(Rental, House):
     prompt_init = staticmethod(prompt_init)
 
 
+class ApartmentRental(Rental, Apartment):
+    def prompt_init():
+        init = Apartment.prompt_init()
+        init.update(Rental.prompt_init())
+        return init
+    prompt_init = staticmethod(prompt_init)
+
+
+class ApartmentPurchase(Purchase, Apartment):
+    def prompt_init():
+        init = Apartment.prompt_init()
+        init.update(Purchase.prompt_init())
+        return init
+    prompt_init = staticmethod(prompt_init)
+
+
+class HousePurchase(Purchase, House):
+    def prompt_init():
+        init = House.prompt_init()
+        init.update(Purchase.prompt_init())
+        return init
+    prompt_init = staticmethod(prompt_init)
+
+
+class Agent:
+    def __init__(self):
+        self.property_list = []
+
+    def display_properties(self):
+        for property in self.property_list:
+            property.display()
+
+    type_map = {
+        ("house", "rental"): HouseRental,
+        ("house", "purchase"): HousePurchase,
+        ("apartment","rental"): ApartmentRental,
+        ("apartment","purchase"): ApartmentPurchase
+    }
